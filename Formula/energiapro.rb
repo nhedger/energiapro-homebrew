@@ -7,20 +7,20 @@ class Energiapro < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/nhedger/energiapro/releases/download/cli-v#{version}/energiapro-aarch64-apple-darwin"
-      sha256 "30fe01f8d122ffa1b5649c82f341cb0463a1d6f140c1d561cfc35b8118b14124"
+      sha256 "31701de012200d4e6a0e92fbc64a72ec3b27e59c29e840142d4d2dc97217d632"
     else
       url "https://github.com/nhedger/energiapro/releases/download/cli-v#{version}/energiapro-x86_64-apple-darwin"
-      sha256 "13ac897eb08f7a369cb7af70babd3f0d6fcfeea2dc6ad548e6659904472c0d87"
+      sha256 "7f2f464ca1b157f3d04387feb1eb1ff50d30b5d8af79dae10fdddacbc5abb200"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/nhedger/energiapro/releases/download/cli-v#{version}/energiapro-x86_64-unknown-linux-gnu"
-      sha256 "ec73cdf95bc27dadde0f4b9d10c99a5b1b69f0fa882eff9f4bfc77ae03d976e0"
+      sha256 "ec53578dcf3a0d1a1fb25b183a878bf7b16c337196ac993435d1b8301446a7ff"
     elsif Hardware::CPU.arm?
       url "https://github.com/nhedger/energiapro/releases/download/cli-v#{version}/energiapro-aarch64-unknown-linux-gnu"
-      sha256 "db59f08cfb206a8dc7a9bc6eeef1c48cf457159423f495a87898dde1e2116fa3"
+      sha256 "fe4967005bc07f27ff6e419c285ff53d67f490872382e430076cbf455aac4870"
     else
       odie "Unsupported Linux architecture: #{Hardware::CPU.arch}"
     end
